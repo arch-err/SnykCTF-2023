@@ -1,0 +1,34 @@
+#!/bin/bash
+exec 3<>/dev/tcp/challenge.ctf.games/30552 && echo "Y" >&3
+
+foo() {
+	timeout 0.4 cat <&3 > testpipe
+	cat tp2 | grep -Eo "[0-9.]+ [+*\-\/] [0-9.]+" | calc -p | perl -pe "s/~//" | bc -l | xargs printf %.1f >&3
+}
+
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+foo
+
+cat <&3
+
+
+
+
+while true; do ./scr; done
+
+
+while true;do cat testpipe > f && cat f > tp2 && grep What f && grep -Eo "[0-9.]+ [+*\-\/] [0-9.]+" f | calc -p  | perl -pe "s/~//" | bc -l | xargs printf %.1f; done

